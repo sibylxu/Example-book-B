@@ -115,7 +115,7 @@ SELECT * FROM Stars;
   px.taiBegin, px.taiEnd,  
 <span class="hljs-comment">-- Aliases (names) are used to give a table, or a column a temporary name.</span>
 <span class="hljs-keyword">FROM</span> specPhoto <span class="hljs-keyword">AS</span> sp         
-<span class="hljs-comment">-- A JOIN clause is used to combine rows from two or more tables, based on key variable they have in common</span>
+<span class="hljs-comment">-- A JOIN clause is used to combine rows from two or more tables, based on key variable they have in common.</span>
 <span class="hljs-keyword">JOIN</span> plateX <span class="hljs-keyword">AS</span> px             
 <span class="hljs-keyword">ON</span> sp.plateID = px.plateID
 <span class="hljs-keyword">WHERE</span>
@@ -139,7 +139,7 @@ SELECT * FROM Stars;
   <span class="hljs-keyword">JOIN</span> PhotoPrimary <span class="hljs-keyword">AS</span> <span class="hljs-keyword">L</span> <span class="hljs-keyword">ON</span> <span class="hljs-keyword">L</span>.ObjID = <span class="hljs-keyword">N</span>.NeighborObjID     
 <span class="hljs-keyword">WHERE</span>
   <span class="hljs-keyword">P</span>.ObjID &lt; <span class="hljs-keyword">L</span>. ObjID       
-<span class="hljs-comment">-- if two objects’ color ratios u-g, g-r, r-i and i-z are less than 0.05m, they have a similar spectra</span>
+<span class="hljs-comment">-- If two objects’ color ratios u-g, g-r, r-i and i-z are less than 0.05m, they have a similar spectra.</span>
 <span class="hljs-comment">-- The abs() function returns the absolute value of a number.                             </span>
   <span class="hljs-keyword">and</span> <span class="hljs-keyword">abs</span>((<span class="hljs-keyword">P</span>.u-<span class="hljs-keyword">P</span>.<span class="hljs-keyword">g</span>)-(<span class="hljs-keyword">L</span>.u-<span class="hljs-keyword">L</span>.<span class="hljs-keyword">g</span>))&lt;<span class="hljs-number">0.05</span>     
   <span class="hljs-keyword">and</span> <span class="hljs-keyword">abs</span>((<span class="hljs-keyword">P</span>.<span class="hljs-keyword">g</span>-<span class="hljs-keyword">P</span>.r)-(<span class="hljs-keyword">L</span>.<span class="hljs-keyword">g</span>-<span class="hljs-keyword">L</span>.r))&lt;<span class="hljs-number">0.05</span>     
@@ -156,7 +156,7 @@ SELECT * FROM Stars;
   <span class="hljs-keyword">JOIN</span> PlateX <span class="hljs-keyword">AS</span> plate <span class="hljs-keyword">ON</span> plate.plate = specObjAll.plate
 <span class="hljs-comment">-- The GROUP BY statement sorts results into groups (categories) based on the value of a data column.</span>
   <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> plate.programname, <span class="hljs-keyword">class</span>    
-<span class="hljs-comment">-- The ORDER BY statement is used to sort the result-set in ascending or descending order</span>
+<span class="hljs-comment">-- The ORDER BY statement is used to sort the result-set in ascending or descending order.</span>
   <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> plate.programname, <span class="hljs-keyword">class</span>     
 </span></code></pre>
 
